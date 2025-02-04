@@ -1,0 +1,202 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0a0114, #252505);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  overflow: hidden;
+}
+
+/* Container Styling */
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  width: 450px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Heading Styling */
+h1 {
+  color: #fff;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Label Styling */
+label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Input Styling */
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input[type="number"]:focus {
+  border-color: #fff;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+/* Button Styling */
+button {
+  background: linear-gradient(135deg, #263509, #071835);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Result Styling */
+#result {
+  margin-top: 25px;
+  text-align: left;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  animation: slideIn 0.5s ease-in-out;
+}
+
+#result h3 {
+  color: #fff;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+#result p {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
+#result .error {
+  color: #ff6b6b;
+  font-weight: bold;
+}
+
+#result .savings {
+  color: #4cd137;
+  font-weight: bold;
+  font-size: 16px;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Divider Styling */
+.divider {
+  border-top: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 20px 0;
+  opacity: 0.5;
+}
+
+/* Animations */
+@keyframes slideIn {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Background Animation */
+body::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 10%, transparent 10.01%);
+  background-size: 20px 20px;
+  animation: moveBackground 10s linear infinite;
+  z-index: -1;
+}
+
+@keyframes moveBackground {
+  from {
+      transform: translate(0, 0);
+  }
+  to {
+      transform: translate(20px, 20px);
+  }
+}
+/* Add this to your existing CSS */
+#result {
+  max-height: 300px; /* Set a maximum height for the result section */
+  overflow-y: auto;  /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+  padding: 10px;     /* Optional: Add some padding */
+  margin-top: 20px;  /* Optional: Add some margin at the top */
+}

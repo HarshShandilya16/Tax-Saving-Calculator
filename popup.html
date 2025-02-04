@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Savings Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        .hidden { display: none; }
+        .divider { border-top: 1px solid #ccc; margin: 20px 0; }
+        .error { color: red; }
+        .savings { color: green; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>TaxSaver</h1>
+        
+        <!-- Salary Input -->
+        <label for="salary">Enter your Annual Salary (₹):</label>
+        <input type="number" id="salary" placeholder="Enter salary" required><br><br>
+
+        <!-- State Selection -->
+        <label for="state">Select State:</label>
+        <select id="state" required>
+            <option value="">--Select State--</option>
+            <option value="andhra-pradesh">Andhra Pradesh</option>
+            <option value="bihar">Bihar</option>
+            <option value="delhi">Delhi</option>
+            <option value="gujarat">Gujarat</option>
+            <option value="karnataka">Karnataka</option>
+            <option value="kerala">Kerala</option>
+            <option value="maharashtra">Maharashtra</option>
+            <option value="odisha">Odisha</option>
+            <option value="punjab">Punjab</option>
+            <option value="tamil-nadu">Tamil Nadu</option>
+            <option value="telangana">Telangana</option>
+            <option value="uttar-pradesh">Uttar Pradesh</option>
+            <option value="west-bengal">West Bengal</option>
+            <option value="other">Other</option>
+        </select><br><br>
+
+        <!-- Advanced Details Button -->
+        <button type="button" id="advancedDetailsBtn">Advanced Details</button><br><br>
+
+        <!-- Advanced Details Form -->
+        <div id="advancedDetailsForm" class="hidden">
+            <label for="hra">HRA (₹):</label>
+            <input type="number" id="hra" value="0"><br><br>
+
+            <label for="standardDeduction">Standard Deduction (₹):</label>
+            <input type="number" id="standardDeduction" value="50000"><br><br>
+
+            <label for="otherDeductions">Other Deductions (₹):</label>
+            <input type="number" id="otherDeductions" value="0"><br><br>
+        </div>
+
+        <!-- Calculate Button -->
+        <button id="calculate">Calculate</button>
+        
+        <!-- Result Section -->
+        <div id="result">
+            <!-- Results will be dynamically inserted here by JavaScript -->
+        </div>
+    </div>
+
+    <!-- JavaScript File -->
+    <script src="popup.js"></script>
+</body>
+</html>
